@@ -1,22 +1,21 @@
-[README.md](https://github.com/user-attachments/files/31965203/README.md)
-# ZEN — PWA
+[README.md](https://github.com/user-attachments/files/31965494/README.md)
+# ZEN PWA — V1.1
 
-Prototype personnel inspiré des maquettes fournies.
+PWA personnelle de Valentin, conçue pour GitHub Pages.
 
-## Lancer
-- Ouvre le dossier avec VS Code.
-- Pour tester correctement le PWA/service worker, utilise un serveur local (ex. extension Live Server) ou GitHub Pages.
-- Sur GitHub : dépose le contenu du dossier dans un repository puis active **Settings → Pages → Deploy from branch**.
+## Correction V1.1
+- démarrage anti-écran gris/blanc ;
+- récupération d'un `localStorage` ancien ou corrompu ;
+- une erreur JavaScript non critique ne bloque plus l'ouverture ;
+- service worker versionné pour éviter le cache de l'ancienne V1 ;
+- navigation et modales rebinding plus robustes ;
+- notes, projets, photos, quotes et réglages conservés localement.
 
-## Fonctionnalités V1
-- Accueil avec montre et horloge temps réel.
-- Navigation vers Notes, Projets et Motivation.
-- Mode ZEN plein écran avec montre et heure.
-- Notes persistantes en localStorage + marquage « idée importante ».
-- Projets/dossiers persistants, notes et photos.
-- Quotes de motivation persistantes.
-- Renommage des menus.
-- Réglages : thème sombre/claire, langue FR/EN (structure V1), fond personnalisé.
-- PWA + cache offline de base.
+## GitHub Pages
+1. Décompresser le ZIP.
+2. Mettre tous les fichiers du dossier à la racine du repository.
+3. GitHub → Settings → Pages → Deploy from branch → `main` / root.
+4. Ouvrir l'URL GitHub Pages.
 
-Les données sont stockées localement dans le navigateur : aucune base de données ou serveur n'est nécessaire pour cette V1.
+### Si une ancienne V1 est déjà installée
+Sur le navigateur : désinstaller l'ancienne PWA / vider les données du site une fois, puis recharger. La V1.1 utilise aussi un nouveau nom de cache (`zen-pwa-v1-1`).
