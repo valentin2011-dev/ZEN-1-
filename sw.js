@@ -1,0 +1,5 @@
+const CACHE="zen-v1";
+const ASSETS=["./","./index.html","./style.css","./app.js","./manifest.json","./assets/dubai.jpg","./assets/watch-classic.png","./assets/watch-skeleton.png","./assets/watch-chrono.png","./assets/watch-black.png"];
+self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener("activate",e=>e.waitUntil(self.clients.claim()));
+self.addEventListener("fetch",e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
